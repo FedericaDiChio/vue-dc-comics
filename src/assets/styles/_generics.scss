@@ -6,6 +6,7 @@
 
 body {
     min-height: 100vh;
+    
 }
 
 
@@ -14,10 +15,13 @@ body {
     margin: 0 auto;
 }
 
+.row {
+    display: flex;    
+}
+
 li {
     list-style-type: none;
-    
-        a {
+            a {
             text-decoration: none;
         }
 }
@@ -28,11 +32,8 @@ img {
 }
 
 footer {          
-    height: 400px;
     background-image: url('assets/img/footer-bg.jpg');
     background-size: cover;
-    background-position: bottom;
-
     
 }
 

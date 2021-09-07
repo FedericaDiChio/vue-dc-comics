@@ -91,7 +91,7 @@ header {
       }      
         a {
           font-size: 15px;
-          color: rgb(0,0,0,);
+          color: $color-black;
           text-transform:$text-size-up;
         }
     }

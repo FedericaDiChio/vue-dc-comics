@@ -17,7 +17,7 @@ export default {
 @import "@/assets/styles/_vars.scss";
     #products {
         height: 150px;
-        background-color: rgb(0,0,0);
+        background-color: $color-black;
             p {
                 line-height: 150px;
                 text-align: center;

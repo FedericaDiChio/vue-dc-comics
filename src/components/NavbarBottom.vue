@@ -1,9 +1,9 @@
 <template>
   <nav id="navbar-bottom">
     <ul>
-      <li v-for="(image, index) in images" :key="index">
-        <!-- <img :src="getImg(image.img)" :alt="image.text" /> -->
-        <a :href="image.url">{{ image.text }}</a>
+      <li v-for="(icon, index) in icons" :key="index">
+        <img :src="getImg(icon.icon)" alt="icon.text" />
+        <a href="">{{ icon.text }} </a>
       </li>
     </ul>
   </nav>
@@ -12,43 +12,40 @@
 <script>
 export default {
   name: "NavbarBottom",
-  data() {
-    return {
-      images: [
+  data(){
+    return{
+      icons: [
         {
-          img: "buy-comics-digital-comics.png",
-          text: "Digital comics",
-          url: "#",
+          icon: "buy-comics-digital-comics.png",
+          text: "digital comics"
         },
         {
-          img: "buy-comics-merchandise.png",
-          text: "Dc merchandise",
-          url: "#",
+          icon: "buy-comics-merchandise.png",
+          text: "DC merchandise"
         },
         {
-          img: "buy-comics-subscriptions.png",
-          text: "Subscription",
-          url: "#",
+          icon: "buy-comics-shop-locator.png",
+          text: "comic shop locator"
         },
         {
-          img: "buy-comics-shop-locator.png",
-          text: "Comics shop locator",
-          url: "#",
+          icon: "buy-comics-subscriptions.png",
+          text: "subscriptions"
         },
         {
-          img: "buy-comics-dc-power-visa.png",
-          text: "Dc power visa",
-          url: "#",
+          icon: "buy-dc-power-visa.svg",
+          text: "DC power visa"
         },
-      ],
-    };
+
+      ]
+    }
   },
-  // methods: {
-  //   getImg(path) {
-  //     return require("@/assets/img/" + path);
-  //   },
-  // },
-};
+
+  methods: {
+      getImg(path){
+          return require ("@/assets/img/" + path);
+      }
+  }
+}
 </script>
     
 <style lang="scss">
@@ -59,13 +56,23 @@ export default {
   display:flex;
   justify-content: center;
   align-items:center;
-    ul {
-      display: flex;      
-      a {
-        color:$font-white;
-        text-transform: $text-size-up;
-        padding: 20px;
-      }
+  ul {
+      display: flex;  
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          a {
+            color:$font-white;
+            text-transform: $text-size-up;
+            margin-right: 30px;
+          }
+          img {
+            margin-right: 10px;
+            width: 40px;
+          }
+      }    
     }
 }
+
 </style>

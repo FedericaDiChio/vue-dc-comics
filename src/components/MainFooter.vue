@@ -1,6 +1,7 @@
 <template>
   <footer>
-    <div class="container" id="mycontainer">
+    <div class="container">
+      <section id="main-footer">
         <div class="row">
           <div class="col">
             <ul>
@@ -33,6 +34,7 @@
             </ul>
           </div>
         </div>
+      </section>
     </div>
   </footer>
 </template>
@@ -165,24 +167,21 @@ export default {
 <style lang="scss">
 @import "@/assets/styles/_vars.scss";
 
-#mycontainer {
-    height: 400px;
-    background-image:  url("../assets/img/dc-logo-bg.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: right;
+#main-footer {
+  height: 400px;
+  background-image: url("../assets/img/dc-logo-bg.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-.row {
-  display: flex;
   .col {
     padding: 30px;
-  }
-  h4 {
-    color: $font-white;
-    font-size: 18px;
-    text-transform: $text-size-up;
-  }
+    h4 {
+      color: $font-white;
+      font-size: 18px;
+      text-transform: $text-size-up;
+    }
 }
 
 a {
