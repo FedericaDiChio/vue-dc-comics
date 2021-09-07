@@ -1,9 +1,9 @@
 <template>
   <header>
     <figure id="header-logo">
-      <img src="@/assets/dc-logo.png" alt="logo" />
+      <img src="@/assets/img/dc-logo.png" alt="logo" />
     </figure>
-    <nav id="navbar">
+    <nav id="top-navbar">
       <ul>
         <li v-for="(link, index) in links" :key="index">
             <a :href="link.url">{{ link.text }}</a>
@@ -78,22 +78,18 @@ export default {
 <style lang="scss">
 header {
   height: 100px;
-//   background-color: royalblue;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-#header-logo {
-    max-width: 70px;
-}
 
-#navbar ul {
+ul {
     display: flex;
+        a {
+            color: black;
+            
+        }
 }
 
-a {
-    color: black;
-       
-}
 </style>

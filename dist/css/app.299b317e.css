@@ -1,0 +1,1 @@
+header{height:100px;justify-content:space-around;align-items:center}header,ul{display:flex}ul a{color:#000}#products{height:150px;background-color:#000}#products p{line-height:150px;text-align:center;color:#fff}*{box-sizing:border-box;margin:0;padding:0}li{list-style-type:none;padding:10px}li a{text-decoration:none}

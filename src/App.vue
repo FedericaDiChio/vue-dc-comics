@@ -19,30 +19,5 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  li {
-    list-style-type: none;
-    padding: 10px; 
-  }
-
-  li a {
-    text-decoration: none;
-  }
-}
+  @import "@/assets/styles/style.scss";
 </style>
