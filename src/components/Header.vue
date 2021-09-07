@@ -5,7 +5,7 @@
     </figure>
     <nav id="navbar">
       <ul>
-        <li v-for="(link, index) in links" :key=index>
+        <li v-for="(link, index) in links" :key="index">
             <a :href="link.url">{{ link.text }}</a>
         </li>
       </ul>
@@ -78,7 +78,7 @@ export default {
 <style lang="scss">
 header {
   height: 100px;
-  background-color: royalblue;
+//   background-color: royalblue;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -92,7 +92,8 @@ header {
     display: flex;
 }
 
-li a {
+a {
     color: black;
+       
 }
 </style>
