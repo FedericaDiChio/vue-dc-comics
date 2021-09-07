@@ -1,16 +1,18 @@
 <template>
-  <header>
-    <figure id="header-logo">
-      <img src="@/assets/img/dc-logo.png" alt="logo" />
-    </figure>
-    <nav id="top-navbar">
-      <ul>
-        <li v-for="(link, index) in links" :key="index">
+  <div class="container">
+    <header>
+      <figure id="header-logo">
+        <img src="@/assets/img/dc-logo.png" alt="logo" />
+      </figure>
+      <nav id="navbar-top">
+        <ul>
+          <li v-for="(link, index) in links" :key="index">
             <a :href="link.url">{{ link.text }}</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script>
@@ -79,17 +81,15 @@ export default {
 header {
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-}
-
-
-ul {
-    display: flex;
-        a {
-            color: black;
-            
-        }
+    ul {
+      display: flex;
+      
+      a {
+        color: black;
+      }
+    }
 }
 
 </style>
