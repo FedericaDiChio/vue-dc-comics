@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/styles/_vars.scss";
 header {
   height: 100px;
   display: flex;
@@ -85,10 +86,14 @@ header {
   align-items: center;
     ul {
       display: flex;
-      
-      a {
-        color: black;
-      }
+      li {
+        padding: 10px;
+      }      
+        a {
+          font-size: 15px;
+          color: rgb(0,0,0,);
+          text-transform:$text-size-up;
+        }
     }
 }
 

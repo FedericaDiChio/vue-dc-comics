@@ -1,6 +1,8 @@
 <template>
   <section id="products">
-      <p>CONTENT GOES HERE</p> 
+      <main>
+          <p>content goes here</p> 
+      </main>
   </section>
   
 </template>
@@ -12,13 +14,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/styles/_vars.scss";
     #products {
         height: 150px;
-        background-color: black;
+        background-color: rgb(0,0,0);
             p {
                 line-height: 150px;
                 text-align: center;
-                color: white;
+                color: $font-white;
+                text-transform:$text-size-up;
             }
     }
 
