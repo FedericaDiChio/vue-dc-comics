@@ -49,7 +49,7 @@ export default {
 </script>
     
 <style lang="scss">
-@import "@/assets/styles/_vars.scss";
+@import "../assets/styles/_vars.scss";
 #navbar-bottom {
   height: 170px;
   background-color: $color-blue;

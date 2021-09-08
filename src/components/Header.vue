@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/styles/_vars.scss";
+@import "../assets/styles/_vars.scss";
 header {
   height: 100px;
   display: flex;

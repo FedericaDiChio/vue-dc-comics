@@ -165,7 +165,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/styles/_vars.scss";
+@import "../assets/styles/_vars.scss";
 
 #main-footer {
   height: 400px;
