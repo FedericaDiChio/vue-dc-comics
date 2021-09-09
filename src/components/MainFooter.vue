@@ -3,35 +3,8 @@
     <div class="container">
       <section id="main-footer">
         <div class="row">
-          <div class="col">
-            <ul>
-              <h4>dc comics</h4>
-              <li v-for="(comic, index) in comics" :key="index">
-                <a href="comic.url">{{ comic.text }}</a>
-              </li>
-            </ul>
-            <ul>
-              <h4>shop</h4>
-              <li v-for="(shop, index) in shops" :key="index">
-                <a href="shop.url">{{ shop.text }}</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <h4>dc</h4>
-              <li v-for="(copyright, index) in copyrights" :key="index">
-                <a href="copyright.url">{{ copyright.text }}</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <h4>sites</h4>
-              <li v-for="(site, index) in sites" :key="index">
-                <a href="site.url">{{ site.text }}</a>
-              </li>
-            </ul>
+          <div v-for="(menu, index) in footerMenu" :key="index" class="col">
+            <FooterMenu :menu="menu" />
           </div>
         </div>
       </section>
@@ -40,128 +13,64 @@
 </template>
 
 <script>
+import FooterMenu from "@/components/FooterMenu.vue";
 export default {
   name: "MainFooter",
   data() {
     return {
-      comics: [
+      footerMenu: [
         {
-          text: "Characters",
-          url: "#",
-          current: false,
+          title: "DC comics",
+          links: [
+              { text: "Characters", url: "#"},
+              { text: "Comics",url: "#"},
+              { text: "Movies", url: "#"},
+              { text: "TV", url: "#"},
+              { text: "Games", url: "#"},
+              { text: "Videos", url: "#"},
+              { text: "News", url: "#"},
+          ],
         },
         {
-          text: "Comics",
-          url: "#",
-          current: true,
+            title: "shops",
+            links: [
+                { text: "Shop DC", url: "#"},
+                { text: "Shop DC Collectibles",url: "#"},
+
+            ],
         },
         {
-          text: "Movies",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Videos",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          url: "#",
-          current: false,
-        },
-      ],
-      shops: [
-        {
-          text: "Shop DC",
-          url: "#",
-        },
-        {
-          text: "Shop DC Collectibles",
-          url: "#",
-        },
-      ],
-      copyrights: [
-        {
-          text: "terms of use",
-          url: "#",
-        },
-        {
-          text: "privacy policy(new)",
-          url: "#",
-        },
-        {
-          text: "ad choices",
-          url: "#",
-        },
-        {
-          text: "advertising",
-          url: "#",
-        },
-        {
-          text: "jobs",
-          url: "#",
-        },
-        {
-          text: "subscriptions",
-          url: "#",
-        },
-        {
-          text: "talent workshops",
-          url: "#",
-        },
-        {
-          text: "CPSC certificates",
-          url: "#",
-        },
-        {
-          text: "ratings",
-          url: "#",
-        },
-        {
-          text: "shop help",
-          url: "#",
-        },
-        {
-          text: "contact us",
-          url: "#",
-        },
-      ],
-      sites: [
-        {
-          text: "DC",
-          url: "#",
-        },
-        {
-          text: "MAD magazine",
-          url: "#",
-        },
-        {
-          text: "DC kids",
-          url: "#",
-        },
-        {
-          text: "DC universe",
-          url: "#",
-        },
-        {
-          text: "DC power visa",
-          url: "#",
-        },
-      ],
-    };
-  },
-};
+            title: "DC",
+            links: [
+                { text: "terms of use", url: "#"},
+                { text: "privacy policy(new)",url: "#"},
+                { text: "ad choices", url: "#"},
+                { text: "advertising", url: "#"},
+                { text: "jobs", url: "#"},
+                { text: "subscriptions", url: "#"},
+                { text: "CPSC certificates", url: "#"},
+                { text: "ratings", url: "#"},
+                { text: "shop help", url: "#"},
+                { text: "contact us", url: "#"},
+            ],
+          },
+          {
+            title: "sites",
+            links: [
+                { text: "DC", url: "#"},
+                { text: "MAD magazine",url: "#"},
+                { text: "DC kids", url: "#"},
+                { text: "DC universe", url: "#"},
+                { text: "DC universe", url: "#"},
+                { text: "DC power visa", url: "#"},
+
+            ],
+          } 
+      ],  
+    }
+  },    
+  components: { FooterMenu },
+};  
 </script>
 
 <style lang="scss">

@@ -3,8 +3,9 @@
         <figure>
             <img :src="img" alt="" />
         </figure>
-        
-        <p>{{ series }}</p>
+        <address>
+            {{ series }}
+        </address>
     </div>
 </template>
 
@@ -17,9 +18,11 @@ export default {
 
 <style lang="scss">
     .card {
-        
+        padding: 15px;
         flex-basis: 15%;
-        // text-align: center;
+        address {
+            font-style: normal;
+        }
                 
 }
     

@@ -112,14 +112,13 @@ export default {
 <style lang="scss">
 @import "../assets/styles/_vars.scss";
 #products {
-  
+  padding-top: 40px;
   background-color: $color-black;
   color: $font-white;
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-       
+    justify-content: center;      
   }
 }
 </style>

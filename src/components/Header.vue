@@ -77,14 +77,25 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/styles/_vars.scss";
 header {
-  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-    ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: $font-white;
+
+    #header-logo {
+      max-width: 60px;
+    } 
+}
+
+ ul {
       display: flex;
       li {
         padding: 10px;
@@ -95,6 +106,4 @@ header {
           text-transform:$text-size-up;
         }
     }
-}
-
 </style>
